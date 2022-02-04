@@ -1,0 +1,57 @@
+.hero {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  z-index: 100;
+  @include respond(tab) {
+    grid-row: 1/ -1;
+    grid-column: 2 / 3;
+  }
+}
+
+.current {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  z-index: 1000;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 5.5rem;
+}
+
+.search {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: end;
+  z-index: 1000;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  @include respond(tab) {
+    align-self: start;
+    justify-self: start;
+  }
+}
+
+.btn {
+  // align-self: flex-end;
+  // margin-right: 2rem;
+}
+
+.future {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.7rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  grid-row-gap: 5rem;
+  padding: 0 2rem;
+
+  @include respond(tab) {
+    gap: 1rem;
+  }
+  @include respond(tab-land) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <script type="module" src="/src/js/controller.js" defer></script>
+    <title>Howdy V2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <img
+          class="hero__img"
+          src="/src/img/clear-day.jpg"
+          alt="clear day"
+        />
+      </div>
+      <section class="current mt-md">
+        <h3 class="current__date">wendsday 23 out 2021</h3>
+        <div class="current__content">
+          <div class="current__card">
+            <p class="current__temp">25&#176;</p>
+            <p class="current__location">Howdy !</p>
+          </div>
+          <div class="current__card">
+            <svg class="current__icon">
+              <use xlink:href="/src/img/sprite.svg#icon-clear-day-full"></use>
+            </svg>
+            <p class="current__condition">Day, Clear</p>
+          </div>
+        </div>
+      </section>
+      <section class="search">
+        <button class="search__btn btn">
+          <svg class="search__icon btn__icon">
+            <use xlink:href="/src/img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </section>
+      <div class="overlay">
+        <a href="javascript:void(0);" class="overlay__close">&times;</a>
+        <form action="" class="search-form overlay__content">
+          <label for="search_input"></label>
+          <input
+            required
+            class="search-form__input"
+            placeholder="Enter Your City"
+            type="text"
+            name="search_input"
+            id="search_input"
+          />
+          <button class="search-form__btn" type="submit">Search</button>
+        </form>
+        <div class="error">
+          <!-- <p class="error__msg">
+              Location Not Found Please turn on location and reload page.
+            </p> -->
+        </div>
+      </div>
+      <div class="spinner">
+        <svg class="spinner__icon">
+          <use xlink:href="/src/img/sprite.svg#icon-spinner"></use>
+        </svg>
+      </div>
+
+      <section class="future mt-sm">
+        <div class="future__card card">
+          <svg class="card__icon">
+            <use xlink:href="/src/img/sprite.svg#icon-cloudy-day-full"></use>
+          </svg>
+          <div class="card__temp">25&#176;</div>
+          <div class="card__day">wed</div>
+        </div>
+        <div class="future__card card">
+          <svg class="card__icon">
+            <use xlink:href="/src/img/sprite.svg#icon-cloudy-day-full"></use>
+          </svg>
+          <div class="card__temp">25&#176;</div>
+          <div class="card__day">wed</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
